@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Frontend Featured Products</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+                text-transform: capitalize;
+                font-family: 'Montserrat', sans-serif;
+             
+            }
+            .features-products{
+                display: flex;
+                margin-left: 50%;
+                transform: translate(-50% , 50%);
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                position: relative;
+
+            }
+            .features-products::before{
+                content: "featured products";
+                width: 200px;
+                height: 50px;
+                background-color: #326d7d;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -80px;
+                left: 80px;
+                font-size: 18px;
+
+            }
+            .features-products > div{
+                width: 240px;
+                height:300px ;
+                border: 5px solid #eee;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                
+            }
+            .features-products > div:nth-of-type(2)::before{
+                content: "sale!";
+                width: 20px;
+                height: 20px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #fff;
+                background-color: #fd5b07;
+                text-align: center;
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                font-size: 14px;
+                box-shadow: 0px 0px 5px 0px black ;
+            }
+            p{
+                align-self: center;
+                
+            }
+            div > p:first-of-type{
+                color: rgb(99, 98, 98);
+            }
+            div > p:nth-of-type(2){
+                color: #326d7d;
+                width: 80px;
+                background-color: #fff;
+                text-align: center;
+                position: relative;
+                margin-top: 5px;
+            }
+            div > p:nth-of-type(2)::before{
+                content: "";
+                width: 200px;
+                height: 3px;
+                background-color: #eee;
+                position: absolute;
+                top: 50%;
+                left: -70%;
+                transform: translateY(-50%);
+                z-index: -1;
+            }
+            del{
+                color: rgb(99, 98, 98);
+                position: relative;
+                margin-right: 30px;
+                font-size: 14px;
+    
+            }
+            del::before{
+                content: "$14.99";
+                color: #fd5b07;
+                width: 60px;
+                background-color: #fff;
+                text-align: center;
+                position: absolute;
+                left: 43px;
+                font-size: 16px;
+
+            }
+            img {
+                width: 100%;
+                height: 188px;
+                border: solid 2px #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="features-products">
+            <div>
+                <img src="images/iges.jpg" alt="">
+                <p>dummy variable product</p>
+                <p>$19.99</p>
+            </div>
+            <div>
+                <img src="images/jjj.jpg" alt="">
+                <p>dummy sale product</p>
+                <p><del>$19.99</del> </p>
+            </div>
+            <div>
+                <img src="images/Sans titre.jpg" alt="">
+                <p>dummy simple product </p>
+                <p>$14.99</p>
+            </div>
+            <div>
+                <img src="images/images.jpg" alt="">
+                <p>out of the stock product</p>
+                <p>$9.99</p>
+            </div>
+        </div>
+    </body>
+</html>
