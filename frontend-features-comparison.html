@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="">
+        <title>frontend features comparison</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+                text-transform: capitalize;
+                font-family: 'Roboto', sans-serif;
+            }
+            body{
+                background-color: #eee;
+                position: relative;
+            }
+            .save{
+                width: 160px;
+                height: 50px;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                background-color: #2196f3;
+                color: white;
+                font-weight: 500;
+                font-size: 22px;
+                position: relative;
+                
+            }
+            .save::before{
+                content: "";
+                width: 50px;
+                height: 50px;
+                background-color: #eee;
+                position: absolute;
+                top: 0px;
+                right: -37px;
+                transform: rotate(45deg);
+            }
+            .box{
+               margin:5% auto;
+               display: flex;
+               justify-content: space-evenly; 
+            }
+            .box > div{
+                background-color: #fff;
+                width: 47%;
+                position: relative;
+            }
+            .basic::before , .pro::before{
+                width: 100%;
+                height: 8%;
+                position: absolute;
+                color: #fff;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                top: -50px;
+                font-size: 20px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+            }
+            hr{
+                border: 1px solid #eee;
+            }
+            .basic::before{
+                background-color: #f44336;
+                content: "\00a0 \00a0 \00a0  basic";
+            }
+            .pro::before{
+                background-color: #2196f3;
+                content: "\00a0 \00a0 \00a0  professional";
+            }
+            p{
+                font-size: 15px;
+                color: rgb(85, 85, 85);
+                margin-left: 50px;
+                position: relative;
+            }
+            .X::before , p:not(.X)::before{
+                color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-30px,-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;  
+            }
+            .X::before{
+                content: "\00D7";
+                background-color: #e92366;
+            }
+            p:not(.X)::before{
+                content: "\2714";
+                background-color: #008c7d;
+            }
+            .class1{
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 2%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="class1">
+            <div class="save">save 50%</div>
+        </div>
+        <div class="box">
+            <div class="basic">
+                <p>watch all movies</p>
+                <hr>
+                <p>movie length [only 10 minutes] </p>
+                <hr>
+                <p>receive mailling lists</p>
+                <hr>
+                <p class="X">track your progress</p>
+                <hr>
+                <p class="X">1GB hosting space to upload your work</p>
+                <hr>
+                <p class="X">new movie every month</p>
+                <hr>
+                <p class="X">privates movie [need to buy]</p>
+                <hr>
+                <p class="X">profile appear in the top members page</p>
+                <hr>
+                <p class="X">movie premier</p>
+                <hr>
+                <p class="X">compete with other members</p>
+                <hr>
+                <p>play games </p>
+                <hr>
+                <p class="X">ranking systems and achivments</p>
+                <hr>
+                <p>watch movies on your cell phone</p>
+            </div>
+            <div class="pro">
+                <p>watch all movies</p>
+                <hr>
+                <p>movie length [all] </p>
+                <hr>
+                <p>receive mailling lists</p>
+                <hr>
+                <p>track your progress</p>
+                <hr>
+                <p>1GB hosting space to upload your work</p>
+                <hr>
+                <p>new movie every month</p>
+                <hr>
+                <p>privates movie [included with the memebership]</p>
+                <hr>
+                <p>profile appear in the top members page</p>
+                <hr>
+                <p>movie premier</p>
+                <hr>
+                <p>compete with other members</p>
+                <hr>
+                <p>play games </p>
+                <hr>
+                <p>ranking systems and achivments</p>
+                <hr>
+                <p>watch movies on your cell phone</p>
+            </div>
+        </div>
+    </body>
+</html>
