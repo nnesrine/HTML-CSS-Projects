@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <style>
+            *{
+                text-transform: capitalize;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+            }
+            form{
+                width: 60%;
+                height: 400px;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: repeat(4,20%);
+                gap: 25px 10px;
+                margin:50px auto ;
+                background-color: #eee;
+            }
+            form > div:nth-child(-n + 3){
+                margin-left: 20px;   
+            }
+            label{
+                position: relative;
+            }
+            form > div:nth-child(-n + 3) > label::before{
+                content: "*";
+                width: 10px;
+                height: 10px;
+                color: red;
+                position: absolute;
+                top: -7px;
+                right: -12px;
+            }
+            form > div{
+                width: 331px;
+                height: 100px;
+                margin-top: 20px;
+            
+            }
+            form > div:nth-child(-n + 4) > input{
+                width: 100%;
+                height: 40px;
+            }
+            input , textarea{
+                margin-top: 15px;
+                border: transparent solid 3px;
+                border-radius: 5px;
+                box-shadow: 0px 3px 1px #0000002e;
+            }
+            .password{
+                grid-column-start: 1;
+                grid-row-start: 2;
+            }
+            input::placeholder{
+                color: #8f8e8e;
+                font-size: 17px;              
+            }
+            .email{
+                grid-column-start: 1;
+                grid-row-start: 3;
+            }
+            #register{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                height: 50px;
+                width: calc(100% - 60px);
+                margin: 20px 40px 20px 20px;
+                background-color: #009688;
+                color: white;
+            }
+            #register:hover{
+                background-color: #00554c;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <div>
+                <label for="name">username</label><br>
+                <input type="text" placeholder="type your name in english only"name="name" required><br>
+            </div>
+            <div class="password">
+                <label for="password" >password</label><br>
+                <input type="password" placeholder="type a complex password" name="password" required><br>
+            </div>
+            <div class="email">
+                <label for="email" >email</label><br>
+                <input type="email" placeholder="type a valid email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">phone</label><br>
+                <input type="text" value="" name="phone" ><br>
+            </div>
+            <div>
+                <label for="brieft">brieft</label><br>
+                <textarea name="brieft" id="" cols="30" rows="5" style="width: 334px; height: 145px;"></textarea>
+            </div>
+            <input type="button" value="register" id="register">
+
+        </form>
+    </body>
+
+</html>
