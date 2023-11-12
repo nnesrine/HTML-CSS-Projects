@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Frontend Team Skills And Stats Design </title>
+        <style>
+            :root {
+            --gray-color: #f6f6f6;
+            --blue-color: #00a0f3;
+            }
+
+            *{
+                box-sizing: border-box;
+                text-transform: capitalize;
+                font-family: 'Open Sans', sans-serif;
+            }
+            .flex-content{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            footer{
+                width: calc(100% - 30px);
+                background-color: rgb(66, 66, 66);
+                color: #ffff;
+                font-size: 15px;
+                margin: 0px 15px 0px;
+                padding: 20px 10px;
+            }
+            li{
+                list-style-type: none;  
+                margin: 20px 10px;
+                font-size: 14px;
+            }
+            .flex-center{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .services{
+                background-color: var(--gray-color);
+                margin: 20px 15px;
+                text-align: center;
+                padding: 20px;
+            }
+            .skills{
+                width: calc(100% - 30px);
+                height: 450px;
+                background-color: var(--gray-color);
+                margin: 60px 15px 0px;
+                position: relative;
+            }
+            .skills::before{
+                content: "our skills";
+                position: absolute;
+                font-size: 25px;
+                font-weight: 600;
+                top: 20px;
+                left: 50%;
+                transform: translate(-50% , 50%);
+
+            }
+            .skills div:nth-child(-n + 5){
+                width: 57%;
+                height: 45px;
+                background-color: var(--blue-color);
+                margin: 10px 0px;
+                position: relative;
+            }
+            .skills div:nth-child(-n + 5)::before{
+                content: "";
+                position: absolute;
+                height: 45px;
+                top: 0px;
+                right: 0px;
+                background-color: #ffff;
+            }
+            .skills div:first-child::before{
+                width: 40%;
+            }
+            .skills div:nth-child(2)::before{
+                width: 30%;
+            }
+            .skills div:nth-child(3)::before{
+                width: 20%;
+            }
+            .skills div:nth-child(4)::before{
+                width: 35%;
+            }
+            .skills div:nth-child(5)::before{
+                width: 10%;
+            }
+            .skills div:nth-child(-n + 5)::after{
+                position: absolute;
+                color: #ffff;
+                top: 15px;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            .skills div:first-child::after{
+                content: "60%";
+                right:41%;
+            }
+            .skills div:nth-child(2)::after{
+                content: "70%";
+                right: 31%;
+            }
+            .skills div:nth-child(3)::after{
+                content: "80%";
+                right: 21%;
+            }
+            .skills div:nth-child(4)::after{
+                content: "65%";
+                right: 36%;
+            }
+            .skills div:nth-child(5)::after{
+                content: "90%";
+                right: 11%;
+            }
+
+            .skills div:first-child{
+                margin-top: 100px;
+            }
+            .skills div:last-child{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                left: 14.5%;
+                top: 21%;
+                font-weight: 600;
+                
+                gap: 10px;
+            }
+            .skills div:last-child > p{
+               
+                font-size: 17px;
+            }
+            .services p{
+                margin: -10px 55px 40px;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            span{
+                color: var(--blue-color);
+            }
+            h1{
+                font-size: 30px;
+                font-weight: 600;
+            }
+            .features >div > p{
+                font-size: 14px;
+                color: rgb(100, 100, 100);
+                margin: -8px 40px 20px;
+                line-height: 1.6;
+            }
+            .features {
+                margin: 80px 55px 20px;
+                text-align: center;
+            }
+            .num{
+                margin: 60px 200px 20px;
+                text-align: center;
+                 
+            }
+            .num > div > p:first-child{
+                font-size: 50px;
+                font-weight: 500;
+                margin: 10px 0px 10px;
+            }
+            .num >div{
+                width: 280px;
+                height: 130px;
+                background-color: #00a0f3;
+            }
+            .features > div > img{
+                width: 100px;
+                height: 100px;
+                margin-bottom: -17px;
+            }
+           .about-us > p{
+                font-size: 14px;
+                color: rgb(71, 71, 71);
+                margin: 130px 55px 0px 0px;
+                line-height: 2;
+                position: relative;
+           }
+           .about-us{
+            margin: 50px 15px 20px;
+            height: 370px;
+            background-color: var(--gray-color);
+           }
+           .about-us > img{
+            margin: 0px 25px;
+           }
+           .about-us > p::before{
+            content: "about us";
+            color: black;
+            font-size: 28px;
+            font-weight: 500;
+            position: absolute;
+            top: -55px;
+           }
+
+          
+
+         
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="flex-content">
+            <h2>Team.</h2>
+            <nav>
+                <ul class="flex-content">
+                    <li>home</li>
+                    <li>about</li>
+                    <li>services</li>
+                    <li>contact</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="services flex-center">
+                <h1>our <span>services</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium neque veniam iste ut laborum, dolorem cumque nam temporibus vitae saepe assumenda. Neque commodi corrupti voluptatum quisquam corporis! Accusamus, nemo nulla.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci ullam minima placeat  eum, quisquam quaerat, deserunt magnam praesentium animi omnis corrupti sed corporis quasi debitis, impedit nostrum minus rem porro.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga in nulla fugit consequatur ex illum error omnis accusantium voluptatem harum dolorem commodi repellendus sapient</p>
+            </section>
+            <section class="features flex-content">
+                <div class="flex-center">
+                    <img src="images/icons8-frontend-development-100.png" alt="">
+                    <h4>design quality</h4>
+                    <p>our design is the best, we craft it with very high quality from scratch.</p>
+                </div>
+                <div class="flex-center">
+                    <img src="images/icons8-low-price-80.png" alt="">
+                    <h4>cheap price</h4>
+                    <p>our design is the chapeast. we create it from scratch.</p>
+                </div>
+                <div class="flex-center">
+                    <img src="images/icons8-performance-96.png" alt="">
+                    <h4>amazing performance</h4>
+                    <p>our code is clean and professional. the speed and performance is our target.</p>
+                </div>
+            </section>
+            <section class="about-us flex-content">
+                <img src="images/team-work-3467185-2904145.png" alt="">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, ipsa quasi voluptate doloribus nulla explicabo expedita. Rerum a expedita modi, iusto distinctio dolorem perferendis dignissimos? Dolorum minus modi suscipitc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nesciunt sequi inventore harum nemo, fugit repellendus autem, dignissimos nobis quibusdam excepturi soluta beatae saepe accusamus dolorum voluptates itaque tenetur expedita?Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit labore numquam reprehenderit ab et debitis, animi id quis, odit optio vel! Earum sed impedit numquam, nemo labore beatae corrupti quae!</p>
+            </section>
+            <section class="num flex-content">
+                <div style="background-color: #b33939; color: #ffff;">
+                    <p>10</p>
+                    <p>services</p>
+                </div>
+                <div style="background-color: #227093; color: #ffff;">
+                    <p>70</p>
+                    <p>designs</p>
+                </div>
+                <div style="background-color: #218c74; color: #ffff;" >
+                    <p>120</p>
+                    <P>clients</P>
+                </div>
+            </section>
+            <section class="skills flex-center">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div >
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>PHP</p>
+                    <p>Python</p>
+                </div>
+            </section>
+        </main>
+        <footer class="flex-content">
+            <div>developed with &lt;3 by <span>nesrine nasri</span> </div>
+            <div>all right reserved &copy; 2023</div>
+        </footer>
+    </body>
+</html>
