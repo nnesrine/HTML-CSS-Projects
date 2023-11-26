@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Picture With Frame</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+            *{
+                box-sizing: border-box;
+                text-transform: capitalize;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .flex{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .parent{
+                margin: 5%  5%;
+                width: 90%;
+            }
+            .imgs  > img{
+                width: 350px;
+                height: 250px;
+                border-radius: 5px;
+                margin-top: 110px;             
+            }
+            .imgs{
+                position: relative;
+                width: 350px;
+                height: 250px;
+
+            }
+
+            .imgs::after{
+                content: "";
+                width: 100%;
+                height: 120%;
+                background-color: transparent;
+                z-index: -1;
+                border: 15px solid #9FA8DA;
+                position: absolute;
+                top: 70px;
+                left: 30px;
+            }
+            .content{
+                margin-left: 150px;
+                margin-right: 150px;
+                margin-top: -20px;
+                
+            }
+            .content >  p:first-child{
+                font-weight: bold;
+                font-size: 35px;
+            }
+            .content > p:nth-child(2){
+                color: #9FA8DA;
+                text-transform: lowercase;
+                font-weight: bold;
+                margin-left: 50px;
+                position: relative;
+                margin-bottom: 25px;
+            }
+            .content > p:nth-child(2)::before{
+                content: "";
+                width: 8px;
+                height: 8px;
+                background-color: transparent;
+                border: #9FA8DA solid 2px;
+                position: absolute;
+                left: -50px;
+                top: 5px;
+            }
+            .content > p:nth-child(2)::after{
+                content: "";
+                width: 35px;
+                height: 0px;
+                border: #9FA8DA solid 1px;
+                position: absolute;
+                top: 10px;
+                left: -45px;
+            }
+            .content > p:nth-child(3){
+                color: rgba(0, 0, 0, 0.63);
+                line-height: 1.8;
+                font-size: 14px;
+            }
+            .card{
+                align-items: center;
+                text-align: center;
+            }
+            .card div{
+                width: 150px;
+                height: 150px;
+                margin: 20px 0px;
+                border: solid 1px rgba(160, 160, 160, 0.541);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .card div::after{
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid #9FA8DA;
+                top: 2px;
+                right: -8px;
+                transform: rotate(-135deg);
+                position: absolute;
+            }
+            .card div::before{
+                position: absolute;
+                z-index: -1;
+                font-size: 60px;
+                font-weight: bolder;
+                color: rgba(160, 160, 160, 0.26);
+                bottom: 0px;
+                right: 0px;
+            }
+            .card div:first-child::before{
+                content: "01";
+            }
+            .card div:nth-child(2)::before{
+                content: "02";
+            }
+            .card div:nth-child(3)::before{
+                content: "03";
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent flex">
+            <div class="imgs">
+                <img src="images/salle-gym-fitness-soins-sante_985276-2740.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>we are here to dream!<br> our team is here to surve <br> you.</p>
+                <p>about us</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat similique quas earum numquam, mollitia voluptate culpa rem eveniet quisquam, animi ut illo nam odit iusto nulla excepturi nemo magnam recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente facere rerum enim soluta perferendis vel totam, modi sequi in moll.</p>
+                <div class="card flex">
+                    <div >
+                        <img src="images/icons8-trainers-48.png" alt="">
+                        <p>visit our gym</p>
+                    </div>
+                    <div>
+                        <img src="images/icons8-gym-48.png" alt="">
+                        <p>work out</p>
+                    </div>
+                    <div>
+                        <img src="images/icons8-fitness-48.png" alt="">
+                        <p>get result</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
