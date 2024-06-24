@@ -1,0 +1,228 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+.page {
+    display: grid;
+    position: relative;
+    grid-template-columns: 16% 21% 21% 21% 21%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    gap: 20px 3px;
+    margin: 30px;
+}
+.one-1{
+    grid-column-start:1 ;
+    grid-row-start: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.one-2{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    background-color: white;
+}
+.one-2::after{
+    content: "140 days in the ship";
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.712);
+    position: absolute;
+    right: 0px;
+    top: 200px;  
+}
+img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #eee;
+    box-shadow:  1px 1px 10px #282525ed;
+}
+.range{
+    width: 80%;
+    height: 18px;
+    background-color: #009688;
+    border-radius: 5px;
+    position: relative;
+}
+.range::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 105%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #eee;
+    right: -1px;
+}
+.one-1 > *{
+    margin: 5px;
+}
+.one-1 > p{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.712);   
+}
+span{
+    color: #009688;
+    font-weight: bold;
+}
+.one-2 > *{
+    margin-left: 20px;
+}
+.one-2 > p{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.712);
+    margin-right: 50px;
+    line-height: 1.8;
+}
+.two{
+    grid-column-start:1 ;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color:rgba(0, 0, 0, 0.548); 
+    position: relative;
+}
+.two > p{
+    margin-left: 20px;
+}
+.two p:first-child{
+    margin-top: 80px;
+}
+.two::before{
+    content: "points log";
+    background-color: #607d8b;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    left: 20px;
+    top: 20px;
+}
+.three{
+    grid-column-start:1 ;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.images > img{
+    margin: 10px;
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+}
+.three::before{
+    content: "throphies";
+    background-color: #607d8b;
+    color: white;
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    left: 20px;
+    top: 20px;
+}
+.images{
+    margin-top: 70px;
+}
+.four{
+    grid-column-start:1 ;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    background-color: white;
+    display: flex;
+    position: relative;
+}
+.four::before{
+    content: "ladder news";
+    background-color: #607d8b;
+    color: white;
+    width: 110px;
+    padding: 10px;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    left: 20px;
+    top: 20px;
+}
+.four > p{
+    margin-top: 80px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.712);
+}
+.five{
+    grid-column-start:1 ;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color:rgba(0, 0, 0, 0.548); 
+    position: relative;
+}
+.five > p{
+    margin-left: 20px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.548);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.five p:first-child{
+    margin-top: 80px;
+}
+.five p:last-child{
+    margin-bottom: 30px;
+}
+.five::before{
+    content: "your power ";
+    background-color: #607d8b;
+    color: white;
+    width: 110px;
+    padding: 10px;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    left: 20px;
+    top: 20px;
+}
+.five .yes::before{
+    content: "yes";
+    color: green;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    right: 20px;
+    top: -50%;
+    transform: translate(-50% , 50%);
+}
+.five .no::before{
+    content: "no";
+    color: red;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    right: 25px;
+    top: -50%;
+    transform: translate(-50% , 50%);
+}

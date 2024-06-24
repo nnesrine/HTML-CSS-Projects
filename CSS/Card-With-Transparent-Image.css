@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+}
+body{
+    background-color: #eeee;
+    position: relative;
+}
+.card{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 40%);
+    flex-direction: column;
+    align-items: center;
+}
+.card::before{
+    content: "";
+    background-image: url("../images/person-blue-shirt.png");
+    width: 125px;
+    height: 135px;
+    position: absolute;
+    top: -110px;
+}
+.card::after{
+    content: "A+";
+    background-color: #3b74ba;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10%;
+    bottom: -16px;
+  right: 20px;
+}
+.two{
+    background-color: white;
+    width: 444px;
+    height: 210px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.two > div {
+    background-color: #eee;
+    display: flex;
+    width: 444px;
+    height: 60px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.788);
+}
+p:first-child{
+    color: #3b74ba;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 40px;
+}
+P:last-child{
+    color:rgba(0, 0, 0, 0.521);
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: -25px;
+}
+.one::after{
+    content: "";
+    width:444px ;
+    height: 2px;
+    background-color: #eee;
+    position: absolute;
+    top: 150px;
+    left: 29px;
+}
+.facebook::before{
+    content: "facebook";
+    position: absolute;
+    font-size: 18px;
+    margin-left: 10px;
+
+}
+.twitter::before{
+    content: "twitter";
+    position: absolute;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.linkdin::before{
+    content: "linkedin";
+    position: absolute;
+    font-size: 18px;
+    margin-left: 10px;
+
+}
+.facebook::after{
+    content: "nesrine nsr";
+    position: absolute;
+    font-size: 18px;
+    display: flex;
+    right: 45px;
+    
+}
+.twitter::after{
+    content: "nesrine_nasri";
+    position: absolute;
+    font-size: 18px;
+    display: flex;
+    right: 45px;
+}
+.linkdin::after{
+    content: "nesrine nasri";
+    position: absolute;
+    font-size: 18px;
+    display: flex;
+    right: 45px;
+}
+

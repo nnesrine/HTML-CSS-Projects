@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    margin: 30px;
+}
+body > div{
+    height: 400px;
+}
+.circle> div , .box> div , .triangle-up> div , .triangle-down > div{
+    margin: 20px;
+    position: relative;
+}
+.circle> div::before , .box> div::before , .triangle-up> div::before , .triangle-down > div::before{
+    content: "";
+    position: absolute;
+    width: 12%;
+    height: 3px;
+    bottom: -22px;
+    left: 0px;
+}
+.circle > div::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: -28px;
+    left: 0px;
+}
+.box > div::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: -28px;
+    left: 0px;
+
+}
+.triangle-up > div::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid ;
+    bottom: -19px;
+    left: 0px;
+}
+.triangle-down > div::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid ;
+    bottom: -32px;
+    left: 0px;
+    transform: rotate(180deg);
+}
+.circle > div:first-of-type ,.box > div:first-of-type , .triangle-up > div:first-of-type , .triangle-down > div:first-of-type{
+    color: #2c6ccf;
+}
+.circle > div:nth-of-type(2) ,.box > div:nth-of-type(2) , .triangle-up > div:nth-of-type(2) , .triangle-down > div:nth-of-type(2){
+    color: #cf2c2c;
+}
+.circle > div:nth-of-type(3) ,.box > div:nth-of-type(3) , .triangle-up > div:nth-of-type(3) , .triangle-down > div:nth-of-type(3){
+    color: #309e0e;
+}
+.circle > div:last-of-type ,.box > div:last-of-type , .triangle-up > div:last-of-type , .triangle-down > div:last-of-type{
+    color: #cd661a;
+}
+.circle > div:first-of-type:before , .box > div:first-of-type:before , .triangle-up > div:first-of-type:before , .triangle-down > div:first-of-type:before , .circle > div:first-of-type:after , .box > div:first-of-type:after{
+    background-color: #2c6ccf;
+}
+.circle > div:nth-of-type(2):before ,.box > div:nth-of-type(2):before , .triangle-up > div:nth-of-type(2):before , .triangle-down > div:nth-of-type(2):before , .circle > div:nth-of-type(2):after ,.box > div:nth-of-type(2):after{
+    background-color: #cf2c2c;
+}
+.circle > div:nth-of-type(3):before ,.box > div:nth-of-type(3):before , .triangle-up > div:nth-of-type(3):before , .triangle-down > div:nth-of-type(3):before , .circle > div:nth-of-type(3):after ,.box > div:nth-of-type(3):after{
+    background-color: #309e0e;
+}
+.circle > div:last-of-type:before ,.box > div:last-of-type:before , .triangle-up > div:last-of-type:before , .triangle-down > div:last-of-type:before , .circle > div:last-of-type:after ,.box > div:last-of-type:after{
+    background-color: #cd661a;
+}
+
